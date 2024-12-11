@@ -1,4 +1,4 @@
-class ProductoAlimenticio:
+class Producto:
     def __init__(self, nombre, precio, cantidad):
         self.nombre = nombre
         self.precio = precio
@@ -13,9 +13,9 @@ class Inventario:
 
     def agregar_producto(self, nombre, precio, cantidad):
         # Agregar un nuevo producto a la lista
-        producto = ProductoAlimenticio(nombre, precio, cantidad)
+        producto = Producto(nombre, precio, cantidad)
         self.productos.append(producto)
-        print(f"Producto {nombre} agregado correctamente.")
+        print(f"Producto {nombre} se ha agregado correctamente.")
 
     def listar_productos(self):
         # Mostrar todos los productos en el inventario
@@ -36,15 +36,15 @@ class Inventario:
                     producto.precio = nuevo_precio
                 if nueva_cantidad:
                     producto.cantidad = nueva_cantidad
-                print(f"Producto {nombre} editado correctamente.")
+                print(f"Producto {nombre} se ha editado correctamente.")
                 return
-        print(f"Producto {nombre} no encontrado.")    
+        print(f"Producto {nombre} no ha sido encontrado.")    
 
     def eliminar_producto(self, nombre):
         # Eliminar un producto del inventario
         for i, producto in enumerate(self.productos):
             if producto.nombre == nombre:
                 del self.productos[i]
-                print(f"Producto {nombre} eliminado correctamente.")
+                print(f"Producto {nombre} se ha eliminado correctamente.")
                 return
-        print(f"Producto {nombre} no encontrado.")
+        print(f"Producto {nombre} no ha sido encontrado.")
