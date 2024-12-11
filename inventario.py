@@ -1,4 +1,4 @@
-class ProductoAlimenticio:
+class Producto:
     def __init__(self, nombre, precio, cantidad):
         self.nombre = nombre
         self.precio = precio
@@ -16,6 +16,6 @@ class Inventario:
         for i, producto in enumerate(self.productos):
             if producto.nombre == nombre:
                 del self.productos[i]
-                print(f"Producto {nombre} eliminado correctamente.")
+                print(f"Producto {nombre} se ha eliminado correctamente.")
                 return
-        print(f"Producto {nombre} no encontrado.")
+        print(f"Producto {nombre} no ha sido encontrado.")
