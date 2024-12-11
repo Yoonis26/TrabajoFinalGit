@@ -1,4 +1,4 @@
-class ProductoAlimenticio:
+class Producto:
     def __init__(self, nombre, precio, cantidad):
         self.nombre = nombre
         self.precio = precio
@@ -13,7 +13,7 @@ class Inventario:
 
     def agregar_producto(self, nombre, precio, cantidad):
         # Agregar un nuevo producto a la lista
-        producto = ProductoAlimenticio(nombre, precio, cantidad)
+        producto = Producto(nombre, precio, cantidad)
         self.productos.append(producto)
-        print(f"Producto {nombre} agregado correctamente.")
+        print(f"Producto {nombre} se ha agregado correctamente.")
 
